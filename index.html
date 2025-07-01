@@ -49,7 +49,29 @@
   <footer style="margin-top: 2rem; font-size: 0.9rem; color: #999;">
     Domain moved from <em>https://ali-ramazani.github.io/portfolio/</em> to this site.<br/>
     &copy; <script>document.write(new Date().getFullYear());</script> Ali Ramazani
+
+    <p style="font-size: 0.9rem; color: #999;">
+      Views: <span id="view-count">loading…</span>
+    </p>
+
+
   </footer>
 </main>
+
+<script>
+  const namespace = 'ali-ramazani-com';
+  const key = 'homepage';
+
+  fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/hit`)
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('view-count').textContent = data.value;
+    })
+    .catch(() => {
+      document.getElementById('view-count').textContent = '—';
+    });
+</script>
+
+
 </body>
 </html>
