@@ -19,9 +19,7 @@
     <li>&gt; wrote an article titled <span class="highlight"><a href="https://medium.com/@aliramazani/using-usability-heuristics-to-inspect-a-ui-952555547085" target="_blank">Using Usability Heuristics to Inspect a User Interface</a></span></li>
   </ul>
 
-
   <p class="current">I'm currently building at <span class="highlight"><a href="https://www.goldmansachs.com/" target="_blank">Goldman Sachs</a></span>.</p>
-
   <p class="vision">I’m passionate about building impactful software at scale and shaping thoughtful product vision.</p>
   <p class="languages">I speak Persian, English, and Spanish.</p>
 
@@ -46,32 +44,10 @@
     <a href="https://ali-ramazani.github.io/portfolio/" target="_blank">ali-ramazani.github.io/portfolio/</a>
   </p>
 
-  <footer style="margin-top: 2rem; font-size: 0.9rem; color: #999;">
-    Domain moved from <em>https://ali-ramazani.github.io/portfolio/</em> to this site.<br/>
+  <footer>
+    Domain moved from <em>https://ali-ramazani.github.io/portfolio/</em> to this site.<br />
     &copy; <script>document.write(new Date().getFullYear());</script> Ali Ramazani
-
-    <p style="font-size: 0.9rem; color: #999;">
-      Views: <span id="view-count">loading…</span>
-    </p>
-
-
   </footer>
 </main>
-
-<script>
-  const namespace = 'ali-ramazani-com';
-  const key = 'homepage';
-
-  fetch(`https://api.counterapi.dev/v1/${namespace}/${key}/hit`)
-    .then(res => res.json())
-    .then(data => {
-      document.getElementById('view-count').textContent = data.value;
-    })
-    .catch(() => {
-      document.getElementById('view-count').textContent = '—';
-    });
-</script>
-
-
 </body>
 </html>
